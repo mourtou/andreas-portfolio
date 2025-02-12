@@ -23,16 +23,21 @@ nav ul li {
     margin: 0 15px;
 }
 
-/* Navigation links set to dark */
 nav ul li a {
     color: #333;
     text-decoration: none;
     font-size: 18px;
 }
 
+/* Hero section updated to be full-width */
 #hero {
     padding: 50px 20px;
     background: white;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box; /* ensures padding doesn't cause horizontal scroll */
+    border-radius: 0;       /* remove rounded corners for full width */
+    box-shadow: none;       /* remove shadow if not needed */
 }
 
 .hero-content h1 {
@@ -66,7 +71,8 @@ nav ul li a {
     text-decoration: none;
 }
 
-section {
+/* All other sections retain the centered, max-width styling */
+section:not(#hero) {
     padding: 40px;
     background: white;
     margin: 20px auto;
