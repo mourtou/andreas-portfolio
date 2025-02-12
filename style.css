@@ -29,27 +29,23 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Hero section updated to be full-width */
-#hero {
-    padding: 50px 20px;
+/* Make all sections full-width */
+section {
+    padding: 40px 20px;  /* Using horizontal padding to keep content from touching screen edges on small devices */
     background: white;
-    margin: 0;
+    margin: 0;           /* Remove auto margins */
     width: 100%;
-    box-sizing: border-box; /* ensures padding doesn't cause horizontal scroll */
-    border-radius: 0;       /* remove rounded corners for full width */
-    box-shadow: none;       /* remove shadow if not needed */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    border-radius: 0;    /* Remove rounded corners */
+    box-shadow: none;    /* Remove shadow if a full-width, flat look is preferred */
 }
 
-.hero-content h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
+/* Optionally add a small gap between sections */
+section + section {
+    margin-top: 20px;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    color: #666;
-}
-
+/* Button styling remains the same */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -71,16 +67,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* All other sections retain the centered, max-width styling */
-section:not(#hero) {
-    padding: 40px;
-    background: white;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -91,4 +77,6 @@ footer {
     color: white;
     padding: 15px 0;
     margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
