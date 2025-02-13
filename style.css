@@ -1,5 +1,4 @@
-css:
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,20 +8,29 @@ body {
     text-align: center;
 }
 
+/* Navigation Bar */
 nav {
     background: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centers the nav bar */
+    align-items: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 22px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px; /* Spaces out menu items */
 }
 
 nav ul li a {
@@ -31,9 +39,14 @@ nav ul li a {
     font-size: 18px;
 }
 
+/* Hero Section */
 #hero {
     padding: 50px 20px;
     background: white;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content h1 {
@@ -46,6 +59,7 @@ nav ul li a {
     color: #666;
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -60,6 +74,7 @@ nav ul li a {
     background: black;
 }
 
+/* Social Links */
 .socials a {
     margin: 10px;
     color: #333;
@@ -67,6 +82,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Sections */
 section {
     padding: 40px;
     background: white;
@@ -76,14 +92,27 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
+/* Footer */
 footer {
     background: #111;
     color: white;
     padding: 15px 0;
     margin-top: 20px;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
 }
